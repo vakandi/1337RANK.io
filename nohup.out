@@ -147,3 +147,82 @@ To https://github.com/vakandi/1337RANK.io.git
    240bac5..fe2edfe  gh-pages -> gh-pages
 FINISHED
 
+[gh-pages 896a695] updaterank
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+ rewrite data.json (91%)
+To https://github.com/vakandi/1337RANK.io.git
+   fe2edfe..896a695  gh-pages -> gh-pages
+FINISHED
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/connection.py", line 416, in connect
+    self.sock = ssl_wrap_socket(
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/data/data/com.termux/files/usr/lib/python3.10/ssl.py", line 512, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/data/data/com.termux/files/usr/lib/python3.10/ssl.py", line 1070, in _create
+    self.do_handshake()
+  File "/data/data/com.termux/files/usr/lib/python3.10/ssl.py", line 1341, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionAbortedError: [Errno 103] Software caused connection abort
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1040, in _validate_conn
+    conn.connect()
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/connection.py", line 416, in connect
+    self.sock = ssl_wrap_socket(
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/data/data/com.termux/files/usr/lib/python3.10/ssl.py", line 512, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/data/data/com.termux/files/usr/lib/python3.10/ssl.py", line 1070, in _create
+    self.do_handshake()
+  File "/data/data/com.termux/files/usr/lib/python3.10/ssl.py", line 1341, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionAbortedError(103, 'Software caused connection abort'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/ranking/rank.py", line 31, in <module>
+    coordination()
+  File "/data/data/com.termux/files/home/ranking/rank.py", line 22, in coordination
+    token = return_token()
+  File "/data/data/com.termux/files/home/ranking/rank.py", line 6, in return_token
+    r = requests.post(url = BASE_URL+ "/oauth/token",
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/data/data/com.termux/files/usr/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionAbortedError(103, 'Software caused connection abort'))
