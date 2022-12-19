@@ -1,5 +1,5 @@
 https://vakandi.github.io/1337RANK.io/index.html
-<br>
+<br><br>
 [![Top Languages](https://img.shields.io/github/languages/top/vakandi/1337RANK.io?color=green&label=shell&logo=github)](https://github.com/vakandi/vakandi)
 # 42 Network Automatic Ranking of Students
 rank_auto_update.sh is the script to refresh the ranking, it will execute 2 other script in the folder "script", and use the folder "data" to store and edit data files, then pushing the new ranks in the file data/data.json in the json format (data/rank.txt store simple rank list of all students).
