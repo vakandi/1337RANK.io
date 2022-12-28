@@ -1,6 +1,6 @@
 require "oauth2"
-UID= "5f098420ac985c69454de207c0ed775aa09f12c7e1e2dc7d7070dd6ec27d49da"
-SECRET= "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"
+UID= "u-s4t2ud-4e64ea992c23df75de2bbd80293f51aa0ac0a84ea354af2c1072c856e5829b7b"
+SECRET= "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"
 
 client = OAuth2::Client.new(UID, SECRET, site: "https://api.intra.42.fr")
 token = client.client_credentials.get_token

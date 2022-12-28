@@ -1,6 +1,6 @@
 import requests, json,time
 USER_ID= "u-s4t2ud-4e64ea992c23df75de2bbd80293f51aa0ac0a84ea354af2c1072c856e5829b7b"
-USER_SECRET= "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"
+USER_SECRET= "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"
 BASE_URL = "https://api.intra.42.fr"
 def return_token():
     r = requests.post(url = BASE_URL+ "/oauth/token",
