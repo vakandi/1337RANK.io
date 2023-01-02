@@ -1,10 +1,10 @@
 1  mcharrad 3.44    
 2  mrian 3.41    
-3  aechaoub 3.16    
-4  ael-mhar 3.03    
-5  hdagdagu 3.02    
-6  asekkak 3.01    
-7  kboughal 2.98    
+3  kboughal 3.38    
+4  aechaoub 3.16    
+5  ael-mhar 3.03    
+6  hdagdagu 3.02    
+7  asekkak 3.01    
 8  zmoumen 2.9699999999999998    
 9  agimi 2.91    
 10  abouabra 2.74    
