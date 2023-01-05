@@ -1,1 +1,1 @@
-#You need to have a full ranking saved in a rank.txt file, and [in this format](https://raw.githubusercontent.com/vakandi/1337RANK.io/data/rank.txt)
+#You need to have a full ranking saved in a rank.txt file, and [in this format](https://raw.githubusercontent.com/vakandi/1337RANK.io/master/data/rank.txt)
