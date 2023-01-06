@@ -2,8 +2,11 @@
 git pull
 #Get Levels of students from api
 python3 script/rank.py > data/rank_without_coalitions.txt
+touch data/data-tmp.json
+touch data/format_final.json
 #Make rank
-sh script/make_rank.sh
+ruby update.rb
+#sh script/make_rank.sh
 #Remove temp files
 rm data/data-tmp.json
 rm data/format_final.json
