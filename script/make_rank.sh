@@ -18,23 +18,22 @@ echo "$(cat $RANKFILE | sed '1d')" > $RANKFILE
 #Create_json.sh
 
 var=0
-LOGIN="$(cat $RANKFILE| awk  '{print $2}' | head -$i | tail -1)"
-LEVEL="$(cat $RANKFILE | awk  '{print $3}' | head -$i | tail -1)"
-COALITION="$(cat $RANKFILE | awk  '{print $4}' | head -$i | tail -1)"
 VARTMP=1
 VARLOGIN=1
-JSON_FMT='"%s": [{"login": "%s", "level": "%s", "coalition": "%s"}], '
 
 echo "" > data/format_final.json
 while [ $var -lt 200 ]
 do
-	var=$((var+1))
-	#Old Line File
-	#echo "$(sh script/create_json.sh $var)" >> data/format_final.json
-	printf "$JSON_FMT" "$var" "$LOGIN" "$LEVEL" "$COALITION" >> data/format_final.json
+	LOGIN="$(cat $RANKFILE| awk  '{print $2}' | head -$var | tail -1)"
+	LEVEL="$(cat $RANKFILE | awk  '{print $3}' | head -$var | tail -1)"
+	COALITION="$(cat $RANKFILE | awk  '{print $4}' | head -$var | tail -1)"
+	JSON_FMT='"%s": [{"login": "%s", "level": "%s", "coalition": "%s"}], '
 	var=$((var+1))
 	VARTMP=$((VARTMP+1))
 	VARLOGIN=$((VARLOGIN+1))
+	#Old Line File
+	#echo "$(sh script/create_json.sh $var)" >> data/format_final.json
+	printf "$JSON_FMT" "$var" "$LOGIN" "$LEVEL" "$COALITION" >> data/format_final.json
 done
 
 #var=$((var+1))
