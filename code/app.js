@@ -18,7 +18,9 @@ function getUsers(compus)
 			  ${coalition  == "Commodore" && login != "wbousfir" ? `<img src="png/commodore.png" max-width="20px" height="5%" width="7%" style="margin: 2px 0px"/>` : ""}
 			  ${coalition  == "Bios" ? `<img src="png/bios.png" max-width="20px" height="5%" width="7%" style="margin: 2px 0px"/>` : ""}
 			  ${coalition  == "Pandora" ? `<img src="png/pandora.png" max-width="20px" height="5%" width="7%" style="margin: 2px 0px"/>` : ""}
-			${login  == "wbousfir" ? `<img src="png/leetsec_logo.png" max-width="20px" height="11%" width="11%" style="margin: 8px -6px"/>&nbsp;&nbsp;` : ""}
+    <!-- 			${login  == "wbousfir" ? `<img src="png/leetsec_logo.png" max-width="20px" height="11%" width="11%" style="margin: 8px -6px"/>&nbsp;&nbsp;` : ""}
+     -->
+	
                           
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <!-- JQuery CDN -->
