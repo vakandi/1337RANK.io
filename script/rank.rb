@@ -34,8 +34,10 @@ def coordination
   users = fetch_users(token, 1)
   sleep(0.5)
   users += fetch_users(token, 2)
+  sleep(0.5)
+  users += fetch_users(token, 3)
   users = users.sort_by { |k| k["created_at"] }.reverse
-  pats = users[0...200]
+  pats = users[0...203]
   pats = pats.sort_by { |k| k["level"] }.reverse
   pats.each.with_index(1) do |user, idx|
     puts "#{idx}  #{user["user"]["login"]} #{user["level"]}    "
