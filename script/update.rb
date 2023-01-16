@@ -35,7 +35,7 @@ varlogin = 2
 File.open('data/format_final.json', 'w') do |f|
   f.truncate(0)
 end
-while var < 200
+while var < 203
   login = File.readlines(rankfile).map { |line| line.split(' ')[1] }[var - 1]
   level = File.readlines(rankfile).map { |line| line.split(' ')[2] }[var - 1]
   line = File.readlines('data/coalitions.txt').find { |line| line.include?(login) }
@@ -65,7 +65,7 @@ end
 
 data_tmp = File.open("data/format_final.json", "r").read
 # Create the output string
-output = '"200":[{"login":"last","level":"0.00"}]}'
+output = '"204":[{"login":"last","level":"0.00"}]}'
 # Insert the contents of 'data/data-tmp.json' between the two strings
 output.insert(0, "var ranksBg = {#{data_tmp}")
 # Write the output string to 'data.json'

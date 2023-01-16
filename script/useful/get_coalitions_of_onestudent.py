@@ -2,8 +2,8 @@ import requests
 import sys
 import time
 
-USER_ID= "5f098420ac985c69454de207c0ed775aa09f12c7e1e2dc7d7070dd6ec27d49da"
-USER_SECRET= "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"
+USER_ID= "u-s4t2ud-4e64ea992c23df75de2bbd80293f51aa0ac0a84ea354af2c1072c856e5829b7b"
+USER_SECRET= "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"
 def get_access_token() -> str:
     payload = {
         "grant_type": "client_credentials",
