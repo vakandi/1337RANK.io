@@ -6,7 +6,7 @@ File.write('data/rank.tmp', File.read('data/rank_without_coalitions.txt').revers
 
 File.open(rankfile, 'w') do |f|
   f.truncate(0)
-  while var < 200
+  while var < 204
     # Print a message to confirm that the loop is being executed
     login1337 = File.readlines('data/rank.tmp').map { |line| line.split(' ')[1] }[var - 1]
     rank = File.readlines('data/rank.tmp').map { |line| line.split(' ')[0] }[var]
@@ -35,7 +35,7 @@ varlogin = 2
 File.open('data/format_final.json', 'w') do |f|
   f.truncate(0)
 end
-while var < 203
+while var < 204
   login = File.readlines(rankfile).map { |line| line.split(' ')[1] }[var - 1]
   level = File.readlines(rankfile).map { |line| line.split(' ')[2] }[var - 1]
   line = File.readlines('data/coalitions.txt').find { |line| line.include?(login) }
