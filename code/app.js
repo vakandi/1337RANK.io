@@ -87,7 +87,7 @@ $(function() {
                               margin : 0px 2px;
                               ">&#128373;</p><!--<img src="png/leetsec_logo.png" max-width="20px" height="15%" width="15%" style="margin: 2px 0px"/>-->` : ""}
                          ${login  == "wzakkabi" ? `<p style = "
-				margin : -4px 2px;
+				margin : 0px 2px;
 				">&#128520;</p>` : ""}
 			${login  == "ikorchi" ? `<p style = "
 				margin : 0px 2px;
