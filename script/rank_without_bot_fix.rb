@@ -37,16 +37,10 @@ def coordination
   sleep(0.5)
   users += fetch_users(token, 3)
   users = users.sort_by { |k| k["created_at"] }.reverse
-  pats = users[0...203]
+  pats = users[0...204]
   pats = pats.sort_by { |k| k["level"] }.reverse
-
-  # Count for keeping track of the index
-  count = 1
-  pats.each do |user|
-    if user["user"]["login"] != "testinggg"
-      puts "#{count}  #{user["user"]["login"]} #{user["level"]}"
-      count += 1
-    end
+  pats.each.with_index(1) do |user, idx|
+    puts "#{idx}  #{user["user"]["login"]} #{user["level"]}    "
   end
 end
 

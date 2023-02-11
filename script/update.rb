@@ -12,8 +12,8 @@ File.open(rankfile, 'w') do |f|
     rank = File.readlines('data/rank.tmp').map { |line| line.split(' ')[0] }[var]
     level = File.readlines('data/rank.tmp').map { |line| line.split(' ')[2] }[var - 1]
     # Read the file and search for the line that contains the login
-#    line = File.readlines('data/coalitions.txt').find { |line| line.include?(login1337) }
-    line = File.readlines('data/coalitions.txt').find { |line| line&.include?(login1337) }
+    line = File.readlines('data/coalitions.txt').find { |line| line.include?(login1337) }
+    #line = File.readlines('data/coalitions.txt').find { |line| line&.include?(login1337) }
     if line
       coalition = line.split("'coalition': ")[1][1..-4]
     else
@@ -35,7 +35,7 @@ varlogin = 2
 File.open('data/format_final.json', 'w') do |f|
   f.truncate(0)
 end
-while var < 204
+while var < 203
   login = File.readlines(rankfile).map { |line| line.split(' ')[1] }[var - 1]
   level = File.readlines(rankfile).map { |line| line.split(' ')[2] }[var - 1]
   line = File.readlines('data/coalitions.txt').find { |line| line.include?(login) }
@@ -65,7 +65,7 @@ end
 
 data_tmp = File.open("data/format_final.json", "r").read
 # Create the output string
-output = '"204":[{"login":"last","level":"0.00"}]}'
+output = '"203":[{"login":"last","level":"0.00"}]}'
 # Insert the contents of 'data/data-tmp.json' between the two strings
 output.insert(0, "var ranksBg = {#{data_tmp}")
 # Write the output string to 'data.json'
