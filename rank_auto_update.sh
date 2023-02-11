@@ -9,7 +9,6 @@ touch data/data-tmp.json
 touch data/format_final.json
 
 #Make rank
-ruby script/update2.rb
 #ruby script/update.rb
 
 #Shell Version for the backend
