@@ -4,11 +4,17 @@ git pull
 ruby script/rank.rb > data/rank_without_coalitions.txt
 #ruby script/rank_without_bot_fix.rb > data/rank_without_coalitions.txt
 
+#Fixing not existing files error on ruby
 touch data/data-tmp.json
 touch data/format_final.json
+
 #Make rank
-ruby script/update.rb
+ruby script/update2.rb
+#ruby script/update.rb
+
+#Shell Version for the backend
 #sh script/make_rank.sh
+
 #Remove temp files
 rm data/data-tmp.json
 rm data/format_final.json
