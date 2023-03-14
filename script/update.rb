@@ -6,7 +6,7 @@ File.write('data/rank.tmp', File.read('data/rank_without_coalitions.txt').revers
 
 File.open(rankfile, 'w') do |f|
   f.truncate(0)
-  while var < 204
+  while var < 203
     # Print a message to confirm that the loop is being executed
     login1337 = File.readlines('data/rank.tmp').map { |line| line.split(' ')[1] }[var - 1]
     rank = File.readlines('data/rank.tmp').map { |line| line.split(' ')[0] }[var]

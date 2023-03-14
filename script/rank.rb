@@ -2,7 +2,7 @@ require "json"
 require "net/http"
 
 USER_ID= "u-s4t2ud-4e64ea992c23df75de2bbd80293f51aa0ac0a84ea354af2c1072c856e5829b7b"
-USER_SECRET= "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"
+USER_SECRET= "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"
 BASE_URL = "https://api.intra.42.fr"
 
 def return_token
@@ -29,6 +29,7 @@ def fetch_users(token, page)
   JSON.parse(response.body)
 end
 
+
 def coordination
   token = return_token
   users = fetch_users(token, 1)
@@ -37,18 +38,14 @@ def coordination
   sleep(0.5)
   users += fetch_users(token, 3)
   users = users.sort_by { |k| k["created_at"] }.reverse
-  pats = users[0...203]
+  pats = users[0...204]
   pats = pats.sort_by { |k| k["level"] }.reverse
-
-  # Count for keeping track of the index
-  count = 1
-  pats.each do |user|
-    if user["user"]["login"] != "testinggg"
-      puts "#{count}  #{user["user"]["login"]} #{user["level"]}"
-      count += 1
-    end
+  pats.each.with_index(1) do |user, idx|
+    next if user["user"]["login"] == "testinggg" || user["user"]["login"] == "hamza"
+    puts "#{idx - 2}  #{user["user"]["login"]} #{user["level"]}    " if idx <= 204
   end
 end
+
 
 coordination
 
