@@ -2,7 +2,7 @@ require "json"
 require "net/http"
 
 USER_ID= "u-s4t2ud-4e64ea992c23df75de2bbd80293f51aa0ac0a84ea354af2c1072c856e5829b7b"
-USER_SECRET= "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"
+USER_SECRET= "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"
 BASE_URL = "https://api.intra.42.fr"
 
 def return_token
