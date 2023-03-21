@@ -24,7 +24,7 @@ jobs:
         git config --local user.email "wael.bousfira@protonmail.com"
         git config --local user.name "vakandi"
         git add .
-        git commit -a -m "Add changes"
+        git commit -a -m "Rank Update"
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
